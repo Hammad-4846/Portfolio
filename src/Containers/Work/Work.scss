@@ -1,0 +1,24 @@
+.app__work-portfolio {
+  font-family: var(--font-base);
+  background-color: var(--primary-color);
+  padding-top: 3rem;
+  position: relative;
+
+  .header__background-stars {
+    position: absolute;
+    top: 0;
+    height: 200vh;
+    // width: ;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .head-text {
+    @media screen and (max-width: 600px) {
+      font-size: 2rem;
+    }
+    @media screen and (max-width: 400px) {
+      font-size: 1.7rem;
+    }
+  }
+}

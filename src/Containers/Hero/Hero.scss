@@ -1,0 +1,129 @@
+.hero__container {
+  position: relative;
+  min-height: 100vh;
+  font-family: var(--font-base);
+  .app__header-info {
+    padding-top: 5rem;
+    padding-left: 7rem;
+    color: white;
+
+    display: flex;
+    align-items: flex-start;
+    flex: 0.65 1;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-start;
+
+    .badge-cmp {
+      justify-content: flex-start;
+      border-radius: 15px;
+      background-color: var(--primary-color);
+      // border: 1px solid white;
+      box-shadow: 0 4px 24px #0a244b;
+      flex-direction: row;
+      padding: 1rem 2rem;
+
+      span {
+        font-size: 3rem;
+      }
+
+      @media screen and (max-width: 600px) {
+        span {
+          font-size: 1.5rem;
+        }
+        padding: 0.5rem;
+
+        h2 {
+          font-size: 2rem;
+        }
+      }
+      @media screen and (max-width: 400px) {
+        h2 {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  .hero__title-info {
+    font-family: var(--font-sec);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    user-select: none;
+    padding-top: 8rem;
+    color: var(--text-color);
+    text-align: center;
+    h1 {
+      font-size: 3.8rem;
+      margin-bottom: 0.6rem;
+
+      @media screen and (max-width: 600px) {
+        font-size: 2.6rem;
+      }
+      @media screen and (max-width: 400px) {
+        font-size: 2rem;
+        padding: 0 0.6rem;
+      }
+    }
+
+    h3 {
+      font-size: 1.6rem;
+      margin-bottom: 2rem;
+    }
+    a {
+      padding: 0.4rem 1rem;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.4rem;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 0.8rem;
+      outline: none;
+      margin-top: 0.5rem;
+      cursor: pointer;
+      // position: relative;
+      z-index: 4;
+    }
+  }
+
+  .header__background-stars {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+}
+
+.main__mask-container {
+  position: absolute;
+  top: 0;
+  .mask-text__container {
+    position: relative;
+    height: 100vh;
+    .mask-new,
+    .visible__text {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 56px;
+      line-height: 5.8rem;
+      cursor: default;
+      text-align: center;
+    }
+
+    .mask-new {
+      position: absolute;
+      top: 0;
+      mask-image: url("../../assets/Ellipse.svg");
+      background-color: var(--secondary-color);
+      mask-repeat: no-repeat;
+      color: black;
+    }
+  }
+}

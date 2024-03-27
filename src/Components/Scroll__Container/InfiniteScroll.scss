@@ -1,0 +1,43 @@
+.scroller {
+  max-width: 90vw;
+  margin-bottom: 8rem;
+}
+
+.scroller[data-animated="true"] {
+  overflow: hidden;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, white 20%, white 90%, transparent);
+}
+
+.scroller[data-animated="true"] .inner__scroller {
+  overflow: hidden;
+  flex-wrap: nowrap;
+  animation: scroll var(--animation-duration, 40s)
+    var(--animation-direction, forwards) linear infinite;
+
+  width: fit-content;
+}
+
+.inner__scroller {
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+  gap: 1rem;
+}
+
+@keyframes scroll {
+  to {
+    /* transform: translateX(calc(50% - 0.5rem)); */
+    transform: translate(calc(-50% - 0.4rem));
+  }
+}
+
+.test {
+  background-color: red !important;
+}
